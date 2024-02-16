@@ -8,6 +8,8 @@ public class Consumer {
 	@KafkaListener(topics="samplekafka",groupId="sampleabc")
 	public void consumeMessage(String message) {
 		System.out.println("Consumed Message from P"+ message);
+		System.out.println( message);
+		
 		
 	}
 
