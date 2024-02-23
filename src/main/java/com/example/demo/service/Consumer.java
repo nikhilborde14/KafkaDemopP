@@ -5,12 +5,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class Consumer {
-	@KafkaListener(topics="samplekafka",groupId="sampleabc")
+	@KafkaListener(topics="city-topic",groupId="kafkatemp")
 	public void consumeMessage(String message) {
 		System.out.println("Consumed Message from P"+ message);
 		System.out.println( message);
-		
-		
 	}
 
 }
